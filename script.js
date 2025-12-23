@@ -115,7 +115,7 @@ function startTyping() {
   const target = document.getElementById("typedText");
   if (!target) return;
   
-  target.innerHTML = "";
+  target.innerHTML = " ";
   index = 0;
   
   if (typingInterval) {
