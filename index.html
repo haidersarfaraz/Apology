@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>For You, Appi ❤️</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="floating-hearts">
+    <span class="heart">❤️</span>
+    <span class="heart">💕</span>
+    <span class="heart">💖</span>
+    <span class="heart">💗</span>
+    <span class="heart">💝</span>
+  </div>
+
+  <div class="particles"></div>
+
+  <audio id="backgroundMusic" loop autoplay>
+    <source src="Assets/music.mp3" type="audio/mpeg">
+    <source src="Assets/music.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <section class="screen active" id="screen1">
+    <div class="hero-content">
+      <h1 class="fade-in-up">For You, <span class="highlight">Appi</span> ❤️</h1>
+      <p class="fade-in-up delay-1">I know I've hurt you, and I deeply regret it.</p>
+      <p class="fade-in-up delay-2">This is my way of showing how truly sorry I am.</p>
+      <button class="glow-button fade-in-up delay-3" onclick="nextScreen()">
+        <span>Read</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen2">
+    <div class="sorry-screen">
+      <div class="sorry-container">
+        <div class="sorry-text" id="sorryText">SORRY</div>
+        <div class="sorry-subtitle fade-in delay-2">I am deeply sorry, Appi</div>
+        <!-- <div class="sorry-tears">
+          <span class="tear">💧</span>
+          <span class="tear">💧</span>
+          <span class="tear">💧</span>
+          <span class="tear">💧</span>
+          <span class="tear">💧</span>
+        </div> -->
+        <p class="sorry-message fade-in delay-3">
+          I know words aren't enough,<br>
+          but I need you to know how sorry I am.
+        </p>
+        <button class="glow-button fade-in delay-4" onclick="nextScreen()">
+          <span>Continue</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen" id="screen3">
+    <div class="screen-content">
+      <h2 class="slide-in-left">A Letter I Owe You</h2>
+      <div class="heart-letter-container">
+        <div class="heart-letter closed" id="heartLetter" onclick="openLetter()">
+          <div class="heart-shape">💌</div>
+          <p class="click-hint">Click to open</p>
+        </div>
+        <div class="letter-box opened" id="letterBox">
+          <div class="letter-paper">
+            <p id="typedText"></p>
+          </div>
+        </div>
+      </div>
+      <button class="glow-button fade-in delay-4" id="continueBtn" onclick="nextScreen()" style="display: none;">
+        <span>Continue</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen4">
+    <div class="screen-content">
+      <h2 class="fade-in-up">Moments I Value</h2>
+      <p class="soft fade-in-up delay-1">
+        These are moments I never want to be the reason you feel distant from me.
+      </p>
+
+      <div class="photo-album">
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/IMG_20251123_122858052.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/IMG_20251123_120708818.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/IMG_20230608_164422.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/IMG_20251123_122854563.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/IMG_20251123_122911541.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/IMG_20251123_133824805.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/IMG_20251123_133825467.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/IMG_20181205_183558.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/caesarapp_201936183221982.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/Screenshot_2024-06-07-23-52-09-295_com.google.android.apps.photos.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/Screenshot_2024-06-07-23-52-18-381_com.google.android.apps.photos.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/Screenshot_2024-06-08-00-04-22-537_com.google.android.apps.photos.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/Snapchat-168679821.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+        <div class="photo-frame">
+          <div class="frame-inner">
+            <img src="Assets/Snapchat-1941371190.jpg" alt="memory">
+            <div class="frame-shadow"></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="glow-button fade-in delay-3" onclick="nextScreen()">
+        <span>Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen5">
+    <div class="screen-content">
+      <h2 class="fade-in-up">What I Am Changing</h2>
+
+      <ul class="promises-list">
+        <li class="promise-item">
+          <span class="check-icon">✓</span>
+          <span>I will not raise my voice when we disagree.</span>
+        </li>
+        <li class="promise-item">
+          <span class="check-icon">✓</span>
+          <span>I will pause instead of reacting.</span>
+        </li>
+        <li class="promise-item">
+          <span class="check-icon">✓</span>
+          <span>I will listen fully, without interrupting.</span>
+        </li>
+        <li class="promise-item">
+          <span class="check-icon">✓</span>
+          <span>I will respect your boundaries.</span>
+        </li>
+      </ul>
+
+      <p class="note fade-in delay-4">
+        These are not promises.<br>
+        These are boundaries I am setting for myself.
+      </p>
+
+      <button class="glow-button fade-in delay-5" onclick="nextScreen()">
+        <span>Finish</span>
+      </button>
+    </div>
+  </section>
+
+  <section class="screen" id="screen6">
+    <div class="screen-content final-screen">
+      <div class="final-message">
+        <p class="fade-in-up delay-1">
+          You don't have to reply.<br>
+          You don't have to forgive me.
+        </p>
+        <p class="fade-in-up delay-2">
+          I just wanted you to know that I care enough to work on myself — even if it takes time.
+        </p>
+        <span class="end-line fade-in delay-3">Whenever you feel ready, Appi.</span>
+        <div class="heart-animation">💖</div>
+      </div>
+    </div>
+  </section>
+
+<script src="script.js"></script>
+</body>
+</html>
